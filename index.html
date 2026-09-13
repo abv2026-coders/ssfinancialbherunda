@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SS Financial Service | Premium Vehicle & Finance Solutions</title>
+<meta name="description" content="SS Financial Service - Premium assistance for Car Loan, Truck Loan, Car Sale & Purchase, Tractor Loan, JCB Loan, RTO Financial Advice and Financial Advisory services.">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif;scroll-behavior:smooth}
+:root{--gold:#d4af37;--gold2:#f7d774;--black:#050505;--dark:#0d0d0d;--card:#151515;--white:#fff;--gray:#bdbdbd}
+body{background:var(--black);color:var(--white);overflow-x:hidden}
+header{position:fixed;top:0;left:0;width:100%;z-index:999;background:rgba(0,0,0,.88);backdrop-filter:blur(15px);border-bottom:1px solid rgba(212,175,55,.25)}
+.navbar{max-width:1200px;margin:auto;padding:18px 25px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:25px;font-weight:800;color:var(--gold2);letter-spacing:1px}.logo span{color:white}
+.nav-links{display:flex;list-style:none;gap:25px;align-items:center}.nav-links a{color:white;text-decoration:none;font-size:15px;transition:.3s}.nav-links a:hover{color:var(--gold2)}
+.menu{display:none;font-size:28px;cursor:pointer;color:var(--gold2)}
+.hero{min-height:100vh;padding:150px 7% 80px;display:flex;align-items:center;position:relative;background:radial-gradient(circle at 80% 30%,rgba(212,175,55,.18),transparent 35%),radial-gradient(circle at 20% 80%,rgba(212,175,55,.08),transparent 30%),#050505}
+.hero-content{max-width:800px;position:relative;z-index:2}.badge{display:inline-block;padding:9px 18px;border:1px solid var(--gold);border-radius:50px;color:var(--gold2);margin-bottom:25px;font-size:14px}
+.hero h1{font-size:clamp(45px,7vw,82px);line-height:1.05;margin-bottom:25px}.hero h1 span{color:var(--gold2)}
+.hero p{color:var(--gray);font-size:18px;line-height:1.8;max-width:700px}.hero-buttons{margin-top:35px;display:flex;gap:15px;flex-wrap:wrap}
+.btn{display:inline-block;padding:15px 25px;border-radius:7px;text-decoration:none;font-weight:bold;transition:.3s;cursor:pointer;border:none}.btn-gold{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#050505}.btn-dark{border:1px solid var(--gold);color:white;background:transparent}.btn:hover{transform:translateY(-4px);box-shadow:0 10px 30px rgba(212,175,55,.25)}
+section{padding:100px 7%}.section-title{text-align:center;margin-bottom:55px}.section-title small{color:var(--gold2);text-transform:uppercase;letter-spacing:3px}.section-title h2{font-size:42px;margin-top:10px}.section-title p{color:var(--gray);max-width:700px;margin:15px auto;line-height:1.7}
+.services{background:#080808}.service-grid{max-width:1200px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:25px}
+.service-card{position:relative;padding:35px 28px;background:linear-gradient(145deg,#171717,#0c0c0c);border:1px solid rgba(212,175,55,.22);border-radius:18px;overflow:hidden;transition:.4s}
+.service-card::before{content:"";position:absolute;width:100px;height:100px;background:var(--gold);filter:blur(70px);opacity:.1;top:-30px;right:-30px}.service-card:hover{transform:translateY(-10px);border-color:var(--gold);box-shadow:0 20px 50px rgba(212,175,55,.12)}
+.icon{width:60px;height:60px;display:flex;align-items:center;justify-content:center;background:rgba(212,175,55,.1);border:1px solid rgba(212,175,55,.35);border-radius:14px;font-size:28px;margin-bottom:25px}
+.service-card h3{font-size:23px;margin-bottom:15px}.service-card p{color:var(--gray);line-height:1.7;margin-bottom:25px}.learn{color:var(--gold2);text-decoration:none;font-weight:bold}
+.about{background:#050505}.about-container{max-width:1200px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}.about-box{padding:40px;background:#111;border:1px solid rgba(212,175,55,.25);border-radius:20px}.about-box h2{font-size:40px;margin-bottom:20px}.about-box h2 span{color:var(--gold2)}.about-box p{color:var(--gray);line-height:1.8;margin-bottom:18px}
+.features{display:grid;grid-template-columns:1fr 1fr;gap:15px}.feature{padding:20px;background:#111;border:1px solid #222;border-radius:12px}.feature strong{display:block;color:var(--gold2);font-size:22px;margin-bottom:5px}
+.process{background:#090909}.process-grid{max-width:1100px;margin:auto;display:grid;grid-template-columns:repeat(4,1fr);gap:20px}.process-card{text-align:center;padding:30px 15px}.number{width:60px;height:60px;margin:0 auto 20px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#000;font-weight:bold;font-size:20px}.process-card h3{margin-bottom:10px}.process-card p{color:var(--gray);line-height:1.6}
+.advisor{background:radial-gradient(circle at center,rgba(212,175,55,.12),transparent 50%),#050505}.advisor-container{max-width:1100px;margin:auto;text-align:center;padding:70px 30px;border:1px solid rgba(212,175,55,.3);border-radius:25px;background:linear-gradient(145deg,#151515,#080808)}.advisor-container h2{font-size:45px;margin-bottom:20px}.advisor-container h2 span{color:var(--gold2)}.advisor-container p{max-width:700px;margin:0 auto 30px;color:var(--gray);line-height:1.8}
+.apply{background:#080808}.form-container{max-width:850px;margin:auto;padding:40px;background:#111;border:1px solid rgba(212,175,55,.25);border-radius:20px}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.form-group{margin-bottom:20px}.form-group.full{grid-column:1/-1}.form-group label{display:block;margin-bottom:8px;color:#eee}.form-group input,.form-group select,.form-group textarea{width:100%;padding:15px;background:#080808;border:1px solid #333;color:white;border-radius:8px;outline:none}.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--gold)}textarea{resize:vertical;min-height:120px}.checkbox{display:flex;gap:10px;color:var(--gray);margin-bottom:25px;align-items:flex-start}.checkbox input{margin-top:4px}
+.contact{background:#050505}.contact-grid{max-width:1100px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.contact-card{text-align:center;padding:35px 20px;background:#111;border:1px solid #222;border-radius:15px}.contact-card .big-icon{font-size:35px;margin-bottom:15px}.contact-card h3{margin-bottom:10px;color:var(--gold2)}.contact-card p,.contact-card a{color:var(--gray);text-decoration:none;line-height:1.7}
+footer{padding:40px 7%;background:#000;border-top:1px solid rgba(212,175,55,.2);text-align:center}footer .logo{margin-bottom:12px}footer p{color:#777}
+.whatsapp{position:fixed;right:25px;bottom:25px;width:60px;height:60px;display:flex;align-items:center;justify-content:center;background:#25D366;color:white;border-radius:50%;font-size:30px;text-decoration:none;z-index:1000;box-shadow:0 8px 25px rgba(37,211,102,.35);animation:pulse 2s infinite}@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.5)}70%{box-shadow:0 0 0 15px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.85);backdrop-filter:blur(10px);display:none;align-items:center;justify-content:center;z-index:2000;padding:20px}.modal.active{display:flex}.modal-box{width:100%;max-width:700px;max-height:90vh;overflow-y:auto;background:#111;border:1px solid var(--gold);border-radius:20px;padding:35px;position:relative}.close{position:absolute;right:20px;top:15px;font-size:30px;color:white;cursor:pointer}.modal-box h2{color:var(--gold2);margin-bottom:10px}.modal-box .sub{color:var(--gray);margin-bottom:25px}
+.vehicle-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:25px}.vehicle{padding:20px;border:1px solid #292929;border-radius:14px;background:#0b0b0b;text-align:center}.vehicle b{color:var(--gold2);display:block;margin-bottom:8px}
+@media(max-width:900px){.nav-links{position:absolute;top:70px;left:0;width:100%;background:#080808;flex-direction:column;padding:25px;display:none;border-bottom:1px solid #333}.nav-links.active{display:flex}.menu{display:block}.service-grid{grid-template-columns:1fr 1fr}.about-container{grid-template-columns:1fr}.process-grid{grid-template-columns:1fr 1fr}.contact-grid{grid-template-columns:1fr}.vehicle-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){section{padding:75px 5%}.hero{padding:130px 5% 70px}.hero h1{font-size:48px}.hero p{font-size:16px}.service-grid,.features,.process-grid,.form-grid,.vehicle-grid{grid-template-columns:1fr}.form-group.full{grid-column:auto}.form-container{padding:25px 18px}.section-title h2{font-size:34px}.advisor-container h2{font-size:34px}.whatsapp{right:18px;bottom:18px}}
+
+/* ===== PREMIUM POLISH ===== */
+body{
+ background:
+ radial-gradient(circle at 15% 10%,rgba(212,175,55,.06),transparent 25%),
+ radial-gradient(circle at 85% 55%,rgba(212,175,55,.045),transparent 28%),
+ #030303;
+}
+header{box-shadow:0 8px 35px rgba(0,0,0,.35)}
+.logo{ text-shadow:0 0 20px rgba(212,175,55,.22)}
+.hero::after{
+ content:"";position:absolute;inset:0;pointer-events:none;
+ background:linear-gradient(90deg,transparent,rgba(212,175,55,.025),transparent);
+}
+.hero-content{animation:heroIn .9s ease both}
+.service-card,.about-box,.contact-card,.form-container,.advisor-container{
+ box-shadow:inset 0 1px 0 rgba(255,255,255,.035),0 15px 50px rgba(0,0,0,.25);
+}
+.service-card h3,.about-box h2,.section-title h2{letter-spacing:-.4px}
+.btn{position:relative;overflow:hidden}
+.btn::after{
+ content:"";position:absolute;top:0;left:-120%;width:70%;height:100%;
+ background:linear-gradient(90deg,transparent,rgba(255,255,255,.3),transparent);
+ transform:skewX(-20deg);transition:.55s;
+}
+.btn:hover::after{left:140%}
+@keyframes heroIn{from{opacity:0;transform:translateY(25px)}to{opacity:1;transform:none}}
+
+</style>
+</head>
+<body>
+
+<header>
+<nav class="navbar">
+<div class="logo">SS <span>Financial Service</span></div>
+<div class="menu" onclick="toggleMenu()">☰</div>
+<ul class="nav-links" id="navLinks">
+<li><a href="#home" onclick="closeMenu()">Home</a></li>
+<li><a href="#services" onclick="closeMenu()">Services</a></li>
+<li><a href="#cars" onclick="closeMenu()">Car Sale/Purchase</a></li>
+<li><a href="#services" onclick="closeMenu()">Truck Loan</a></li>
+<li><a href="#about" onclick="closeMenu()">About</a></li>
+<li><a href="#process" onclick="closeMenu()">Process</a></li>
+<li><a href="#advisor" onclick="closeMenu()">Advisor</a></li>
+<li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+<li><a href="#apply" class="btn btn-gold" onclick="closeMenu()">Apply Now</a></li>
+</ul>
+</nav>
+</header>
+
+<section class="hero" id="home">
+<div class="hero-content">
+<div class="badge">TRUSTED FINANCIAL & VEHICLE SERVICES</div>
+<h1>Your Dream Vehicle.<br><span>Our Financial Support.</span></h1>
+<p>SS Financial Service provides professional assistance for Car Loan, Car Sale & Purchase, Tractor Loan, JCB Loan, RTO Financial Advice and Financial Advisory services.</p>
+<div class="hero-buttons">
+<a href="#services" class="btn btn-gold">Explore Services</a>
+<a href="#cars" class="btn btn-dark">Car Sale / Purchase</a>
+<a href="#apply" class="btn btn-dark">Apply Now</a>
+</div>
+</div>
+</section>
+
+<section class="services" id="services">
+<div class="section-title"><small>What We Offer</small><h2>Our Financial Services</h2><p>Choose the service you need and submit your requirement. Our team can contact you for further assistance.</p></div>
+<div class="service-grid">
+
+<div class="service-card"><div class="icon">🚗</div><h3>Car Loan</h3><p>Financial assistance for new and used car requirements, subject to lender eligibility and approval.</p><a href="#apply" class="learn" onclick="selectService('Car Loan')">Apply for Car Loan →</a></div>
+
+<div class="service-card"><div class="icon">🔄</div><h3>Car Sale & Purchase</h3><p>Assistance for customers looking to buy or sell new and used cars, with requirement-based guidance.</p><a href="#cars" class="learn">Explore Car Sale/Purchase →</a></div>
+
+
+<div class="service-card"><div class="icon">🚛</div><h3>Truck Loan</h3><p>Financial assistance for eligible new and used commercial truck financing requirements, subject to lender terms and approval.</p><a href="#apply" class="learn" onclick="selectService('Truck Loan')">Apply for Truck Loan →</a></div>
+
+<div class="service-card"><div class="icon">🚜</div><h3>Tractor Loan</h3><p>Assistance for tractor financing requirements for eligible customers and agricultural businesses.</p><a href="#apply" class="learn" onclick="selectService('Tractor Loan')">Apply for Tractor Loan →</a></div>
+
+<div class="service-card"><div class="icon">🏗️</div><h3>JCB Loan</h3><p>Financial guidance for JCB and construction equipment financing requirements.</p><a href="#apply" class="learn" onclick="selectService('JCB Loan')">Apply for JCB Loan →</a></div>
+
+<div class="service-card"><div class="icon">📄</div><h3>RTO Financial Advice</h3><p>Assistance and guidance regarding vehicle-related financial requirements and RTO processes.</p><a href="#apply" class="learn" onclick="selectService('RTO Financial Advice')">Get RTO Assistance →</a></div>
+
+<div class="service-card"><div class="icon">👨‍💼</div><h3>Financial Advisor</h3><p>Discuss your financial requirement with our advisor and understand possible financing options.</p><a href="#apply" class="learn" onclick="selectService('Financial Advisor')">Talk to Advisor →</a></div>
+
+<div class="service-card"><div class="icon">💼</div><h3>Business Finance</h3><p>Financial assistance and guidance for eligible business and commercial financing requirements.</p><a href="#apply" class="learn" onclick="selectService('Business Finance')">Enquire Now →</a></div>
+
+</div>
+</section>
+
+<section id="cars" class="services">
+<div class="section-title"><small>Vehicle Desk</small><h2>Car Sale & Purchase</h2><p>Looking to buy or sell a car? Select your requirement and send the details directly to our WhatsApp.</p></div>
+<div class="about-container">
+<div class="about-box">
+<h2>Buy or <span>Sell Your Car</span></h2>
+<p>Tell us whether you want to buy a car, sell your car, or need help with both. Share your basic requirement and our team can contact you.</p>
+<div class="hero-buttons">
+<button class="btn btn-gold" onclick="openCarForm('Car Purchase')">I Want to Buy a Car</button>
+<button class="btn btn-dark" onclick="openCarForm('Car Sale')">I Want to Sell a Car</button>
+</div>
+</div>
+<div class="vehicle-grid">
+<div class="vehicle"><div style="font-size:38px">🚘</div><b>New Car</b><span>Purchase enquiry</span></div>
+<div class="vehicle"><div style="font-size:38px">🚛</div><b>Truck Finance</b><span>Commercial vehicle enquiry</span></div>
+
+<div class="vehicle"><div style="font-size:38px">🚙</div><b>Used Car</b><span>Purchase enquiry</span></div>
+<div class="vehicle"><div style="font-size:38px">💰</div><b>Sell Car</b><span>Sale enquiry</span></div>
+<div class="vehicle"><div style="font-size:38px">🔎</div><b>Car Search</b><span>Requirement based</span></div>
+<div class="vehicle"><div style="font-size:38px">📋</div><b>Vehicle Details</b><span>Share basic details</span></div>
+<div class="vehicle"><div style="font-size:38px">🤝</div><b>Assistance</b><span>Talk to our team</span></div>
+</div>
+</div>
+</section>
+
+<section class="about" id="about">
+<div class="about-container">
+<div class="about-box"><h2>Welcome to <span>SS Financial Service</span></h2><p>We help customers understand their financing and vehicle requirements and connect them with suitable options, subject to lender terms, eligibility and approval.</p><p>Our goal is to make the financial assistance and vehicle enquiry process simple, transparent and convenient.</p><a href="#apply" class="btn btn-gold">Start Your Enquiry</a></div>
+<div class="features">
+<div class="feature"><strong>01</strong>Professional Guidance</div><div class="feature"><strong>02</strong>Simple Process</div>
+<div class="feature"><strong>03</strong>Multiple Services</div><div class="feature"><strong>04</strong>Customer Support</div>
+<div class="feature"><strong>05</strong>Quick Enquiry</div><div class="feature"><strong>06</strong>Transparent Assistance</div>
+</div>
+</div>
+</section>
+
+<section class="process" id="process">
+<div class="section-title"><small>How It Works</small><h2>Simple 4-Step Process</h2></div>
+<div class="process-grid">
+<div class="process-card"><div class="number">01</div><h3>Submit Enquiry</h3><p>Tell us your name, phone number and requirement.</p></div>
+<div class="process-card"><div class="number">02</div><h3>Requirement Review</h3><p>Our team understands your financial or vehicle requirement.</p></div>
+<div class="process-card"><div class="number">03</div><h3>Guidance</h3><p>We discuss available financing or vehicle enquiry possibilities.</p></div>
+<div class="process-card"><div class="number">04</div><h3>Further Process</h3><p>Eligible applications proceed as per applicable requirements.</p></div>
+</div>
+</section>
+
+<section class="advisor" id="advisor">
+<div class="advisor-container"><h2>Need a <span>Financial Advisor?</span></h2><p>Not sure which financial service is suitable for your requirement? Submit your details and tell us what you need. Our team can guide you about the next steps.</p><a href="#apply" class="btn btn-gold" onclick="selectService('Financial Advisor')">Talk to Financial Advisor</a></div>
+</section>
+
+<section class="apply" id="apply">
+<div class="section-title"><small>Quick Enquiry</small><h2>Premium Enquiry Desk</h2><p>Fill the form below. After submission, WhatsApp will open with your enquiry details.</p></div>
+<div class="form-container">
+<form id="loanForm">
+<div class="form-grid">
+<div class="form-group"><label>Full Name *</label><input type="text" id="name" placeholder="Enter your name" required></div>
+<div class="form-group"><label>Phone Number *</label><input type="tel" id="phone" placeholder="Enter 10 digit mobile number" pattern="[0-9]{10}" required></div>
+<div class="form-group"><label>Gmail / Email *</label><input type="email" id="email" placeholder="example@gmail.com" required></div>
+<div class="form-group"><label>Select Service *</label>
+<select id="service" required>
+<option value="">Select Service</option>
+<option>Car Loan</option><option>Car Sale</option><option>Car Purchase</option><option>Truck Loan</option><option>Tractor Loan</option><option>JCB Loan</option><option>RTO Financial Advice</option><option>Financial Advisor</option><option>Business Finance</option>
+</select></div>
+<div class="form-group full"><label>What Work / Requirement? *</label><textarea id="requirement" placeholder="Tell us about your requirement..." required></textarea></div>
+</div>
+<div class="checkbox"><input type="checkbox" id="agree" required><label for="agree">I agree to be contacted regarding my enquiry.</label></div>
+<button type="submit" class="btn btn-gold">Submit Enquiry on WhatsApp</button>
+</form>
+</div>
+</section>
+
+<section class="contact" id="contact">
+<div class="section-title"><small>Get In Touch</small><h2>Contact SS Financial Service</h2></div>
+<div class="contact-grid">
+<div class="contact-card"><div class="big-icon">📱</div><h3>Phone / WhatsApp</h3><a href="tel:+918717990818">+91 87179 90818</a></div>
+<div class="contact-card"><div class="big-icon">💬</div><h3>WhatsApp</h3><a href="https://wa.me/918717990818" target="_blank">Chat With Us</a></div>
+<div class="contact-card"><div class="big-icon">🕐</div><h3>Working Hours</h3><p>Monday – Saturday<br>9:00 AM – 7:00 PM</p></div>
+</div>
+</section>
+
+<footer><div class="logo">SS <span>Financial Service</span></div><p>© <span id="year"></span> SS Financial Service. All Rights Reserved.</p><p style="margin-top:10px;font-size:12px;">Financial assistance and vehicle transactions are subject to applicable terms, documentation, eligibility and approval.</p></footer>
+
+<a class="whatsapp" href="https://wa.me/918717990818" target="_blank" title="Chat on WhatsApp">☎</a>
+
+<div class="modal" id="carModal" onclick="closeCarForm(event)">
+<div class="modal-box" onclick="event.stopPropagation()">
+<div class="close" onclick="closeCarForm()">×</div>
+<h2 id="carModalTitle">Car Enquiry</h2>
+<p class="sub">Fill the details below. WhatsApp will open with your enquiry.</p>
+<form id="carForm">
+<div class="form-group"><label>Full Name *</label><input type="text" id="carName" required></div>
+<div class="form-group"><label>Phone Number *</label><input type="tel" id="carPhone" pattern="[0-9]{10}" required></div>
+<div class="form-group"><label>Gmail / Email</label><input type="email" id="carEmail" placeholder="example@gmail.com"></div>
+<div class="form-group"><label>Car / Requirement Details *</label><textarea id="carRequirement" placeholder="Example: Used car, budget, model, year, etc." required></textarea></div>
+<div class="checkbox"><input type="checkbox" id="carAgree" required><label for="carAgree">I agree to be contacted regarding my enquiry.</label></div>
+<button type="submit" class="btn btn-gold">Send on WhatsApp</button>
+</form>
+</div>
+</div>
+
+<script>
+function toggleMenu(){document.getElementById("navLinks").classList.toggle("active")}
+function closeMenu(){document.getElementById("navLinks").classList.remove("active")}
+function selectService(serviceName){document.getElementById("service").value=serviceName}
+
+function openCarForm(type){
+ document.getElementById("carModalTitle").textContent=type==="Car Sale"?"Sell Your Car":"Buy a Car";
+ document.getElementById("carModal").classList.add("active");
+ document.getElementById("carForm").dataset.type=type;
+}
+function closeCarForm(e){
+ if(!e || e.target===document.getElementById("carModal")) document.getElementById("carModal").classList.remove("active");
+}
+
+document.getElementById("carForm").addEventListener("submit",function(e){
+ e.preventDefault();
+ const name=document.getElementById("carName").value.trim();
+ const phone=document.getElementById("carPhone").value.trim();
+ const email=document.getElementById("carEmail").value.trim();
+ const requirement=document.getElementById("carRequirement").value.trim();
+ const agree=document.getElementById("carAgree").checked;
+ if(!/^[0-9]{10}$/.test(phone)){alert("Please enter a valid 10 digit mobile number.");return}
+ if(!agree){alert("Please accept the consent checkbox.");return}
+ const type=this.dataset.type||"Car Enquiry";
+ const message=`*SS FINANCIAL SERVICE - ${type.toUpperCase()}*\\n\\nName: ${name}\\nPhone: ${phone}\\nEmail: ${email||"Not provided"}\\nRequirement:\\n${requirement}\\n\\n--------------------------------\\nWebsite Enquiry`;
+ window.open("https://wa.me/918717990818?text="+encodeURIComponent(message),"_blank");
+});
+
+document.getElementById("loanForm").addEventListener("submit",function(e){
+ e.preventDefault();
+ const name=document.getElementById("name").value.trim();
+ const phone=document.getElementById("phone").value.trim();
+ const email=document.getElementById("email").value.trim();
+ const service=document.getElementById("service").value;
+ const requirement=document.getElementById("requirement").value.trim();
+ const agree=document.getElementById("agree").checked;
+ if(!name||!phone||!email||!service||!requirement){alert("Please fill all required fields.");return}
+ if(!/^[0-9]{10}$/.test(phone)){alert("Please enter a valid 10 digit mobile number.");return}
+ if(!agree){alert("Please accept the consent checkbox.");return}
+ const message=`*SS FINANCIAL SERVICE - NEW ENQUIRY*\\n\\nName: ${name}\\nPhone: ${phone}\\nEmail: ${email}\\nService: ${service}\\nRequirement:\\n${requirement}\\n\\n--------------------------------\\nWebsite Enquiry`;
+ window.open("https://wa.me/918717990818?text="+encodeURIComponent(message),"_blank");
+});
+
+document.getElementById("year").textContent=new Date().getFullYear();
+window.addEventListener("scroll",function(){
+ const header=document.querySelector("header");
+ header.style.background=window.scrollY>50?"rgba(0,0,0,.97)":"rgba(0,0,0,.88)";
+});
+</script>
+</body>
+</html>
